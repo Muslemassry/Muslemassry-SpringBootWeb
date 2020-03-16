@@ -1,0 +1,3 @@
+use testDB;
+select * from MODEL_OBJECT;
+insert into MODEL_OBJECT (ID, NAME) values (1, "HLI");

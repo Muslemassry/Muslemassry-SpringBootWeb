@@ -1,0 +1,22 @@
+version: "3.2"
+services:
+  mysql1:
+    restart: always      
+    image: mysql/mysql-server
+    container_name: mysql1
+    environment:
+      - MYSQL_ROOT_PASSWORD=newpassword
+    ports:
+      - 3306:3306
+    volumes:
+      - D:\docker_db\:/var/lib/mysql
+  web:
+    image: muslemassry/springbootweb
+    container_name: springbootweb
+    ports:
+      - 9090:9090
+    environment:
+      WAITS_HOSTS: mysql1:3306
+    depends_on: 
+      - mysql1
+
