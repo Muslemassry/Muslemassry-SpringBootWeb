@@ -1,3 +1,5 @@
+create database testDB;
 use testDB;
+create table MODEL_OBJECT (ID INTEGER, NAME VARCHAR(30));
 select * from MODEL_OBJECT;
 insert into MODEL_OBJECT (ID, NAME) values (1, "HLI");
